@@ -27,3 +27,24 @@
 // Gọi hàm khi trang được tải
     window.onload = fetchRSS;
 
+// API URL với từ khóa tìm kiếm 'house'
+ const apiUrl = "https://api.unsplash.com/photos/?query=house&client_id=YjmIM3teXV0YtFawSEev4RWxO9ue98s5yAZxZHrW_AU";
+
+ // Hàm để lấy ảnh và hiển thị
+ function fetchImages() {
+     fetch(apiUrl)
+         .then(response => response.json())
+         .then(data => {
+             const gallery = document.querySelector(".gallery-container");
+             
+             data.forEach(image => {
+                 const imgElement = document.createElement("img");
+                 imgElement.src = image.urls.small;
+                 imgElement.alt = image.alt_description;
+                 gallery.appendChild(imgElement);
+             });
+         })
+         .catch(error => console.error('Error fetching images:', error));
+ }
+
+ window.onload = fetchImages;
