@@ -1,44 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thiết Kế Nhà Đẹp</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Nhà Đẹp và Phong Cách Sống</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="form-container">
-        <h1>Gửi Yêu Cầu Thiết Kế Nhà</h1>
-        <form id="designForm">
-            <div class="form-group">
-                <label for="name">Họ và Tên:</label>
-                <input type="text" id="name" name="name" placeholder="Nhập họ và tên của bạn" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Số Điện Thoại:</label>
-                <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
-            </div>
-            <div class="form-group">
-                <label for="houseType">Loại Nhà Mong Muốn:</label>
-                <select id="houseType" name="houseType" required>
-                    <option value="" disabled selected>Chọn loại nhà</option>
-                    <option value="villa">Biệt Thự</option>
-                    <option value="apartment">Căn Hộ</option>
-                    <option value="townhouse">Nhà Phố</option>
-                    <option value="bungalow">Nhà Cấp 4</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="message">Ý Tưởng hoặc Yêu Cầu:</label>
-                <textarea id="message" name="message" placeholder="Mô tả ngắn gọn ý tưởng của bạn" rows="5"></textarea>
-            </div>
-            <button type="submit">Gửi Yêu Cầu</button>
-        </form>
-    </div>
-    <script src="script.js"></script>
+  <!-- Header -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Trang chủ</a></li>
+        <li><a href="#articles">Bài viết</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <h1>Nhà Đẹp và Phong Cách Sống</h1>
+  </header>
+
+  <!-- Body with Articles -->
+  <main>
+    <section id="articles">
+      <article class="post">
+        <img src="house1.jpg" alt="Nhà đẹp 1" />
+        <h2><a href="article1.html">Thiết kế nhà đẹp phong cách hiện đại</a></h2>
+        <p>Khám phá những thiết kế nhà đẹp với phong cách hiện đại, mang lại không gian sống thoải mái và tiện nghi...</p>
+      </article>
+      
+      <article class="post">
+        <img src="house2.jpg" alt="Nhà đẹp 2" />
+        <h2><a href="article2.html">Nhà đẹp cho gia đình nhiều thế hệ</a></h2>
+        <p>Những gợi ý thiết kế nhà đẹp phù hợp cho gia đình nhiều thế hệ sống chung, với không gian riêng tư nhưng vẫn gắn kết...</p>
+      </article>
+      
+      <!-- Add more articles as needed -->
+    </section>
+  </main>
+
+  <!-- Footer with Contact Information and Form -->
+  <footer id="contact">
+    <h3>Liên hệ với chúng tôi</h3>
+    <p>Địa chỉ: 123 Đường ABC, TP. Hà Nội</p>
+    <form id="contact-form" action="send_form.php" method="POST">
+      <label for="name">Họ và tên:</label>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="message">Lời nhắn:</label>
+      <textarea id="message" name="message" required></textarea><br>
+
+      <button type="submit">Gửi yêu cầu</button>
+    </form>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
