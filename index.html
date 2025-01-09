@@ -3,47 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài Viết Nhà Đẹp</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        .article { margin-bottom: 20px; }
-        .article h2 { margin: 0; }
-        .article a { color: blue; text-decoration: none; }
-        .article p { color: #555; }
-    </style>
+    <title>Nhà Đẹp - Tin Tức và Thiết Kế</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bài Viết Mới Nhất</h1>
-    <div id="articles-container"></div>
+    <!-- Header - Menu -->
+    <header>
+        <div class="container">
+            <h1>Nhà Đẹp</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Trang Chủ</a></li>
+                    <li><a href="#">Bài Viết Mới Nhất</a></li>
+                    <li><a href="#">Phong Cách Sống</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <script>
-        // Đọc dữ liệu từ file vnexpress_articles.json
-        fetch('rss_vnexpress.json')
-            .then(response => response.json())
-            .then(data => {
-                const articlesContainer = document.getElementById('articles-container');
-                
-                data.forEach(article => {
-                    const articleDiv = document.createElement('div');
-                    articleDiv.classList.add('article');
-                    
-                    const title = document.createElement('h2');
-                    title.textContent = article.title;
-                    articleDiv.appendChild(title);
+    <!-- Main Content - Hình ảnh ngôi nhà đẹp -->
+    <main>
+        <section class="image-gallery">
+            <h2>Hình Ảnh Nhà Đẹp</h2>
+            <div class="gallery-container">
+                <!-- 18 ảnh chia ra thành 6 hàng, mỗi hàng 3 cột -->
+                <div class="image-item"><img src="image1.jpg" alt="Nhà Đẹp 1"></div>
+                <div class="image-item"><img src="image2.jpg" alt="Nhà Đẹp 2"></div>
+                <div class="image-item"><img src="image3.jpg" alt="Nhà Đẹp 3"></div>
+                <div class="image-item"><img src="image4.jpg" alt="Nhà Đẹp 4"></div>
+                <div class="image-item"><img src="image5.jpg" alt="Nhà Đẹp 5"></div>
+                <div class="image-item"><img src="image6.jpg" alt="Nhà Đẹp 6"></div>
+                <div class="image-item"><img src="image7.jpg" alt="Nhà Đẹp 7"></div>
+                <div class="image-item"><img src="image8.jpg" alt="Nhà Đẹp 8"></div>
+                <div class="image-item"><img src="image9.jpg" alt="Nhà Đẹp 9"></div>
+                <div class="image-item"><img src="image10.jpg" alt="Nhà Đẹp 10"></div>
+                <div class="image-item"><img src="image11.jpg" alt="Nhà Đẹp 11"></div>
+                <div class="image-item"><img src="image12.jpg" alt="Nhà Đẹp 12"></div>
+                <div class="image-item"><img src="image13.jpg" alt="Nhà Đẹp 13"></div>
+                <div class="image-item"><img src="image14.jpg" alt="Nhà Đẹp 14"></div>
+                <div class="image-item"><img src="image15.jpg" alt="Nhà Đẹp 15"></div>
+                <div class="image-item"><img src="image16.jpg" alt="Nhà Đẹp 16"></div>
+                <div class="image-item"><img src="image17.jpg" alt="Nhà Đẹp 17"></div>
+                <div class="image-item"><img src="image18.jpg" alt="Nhà Đẹp 18"></div>
+            </div>
+        </section>
+    </main>
 
-                    const link = document.createElement('a');
-                    link.href = article.link;
-                    link.textContent = 'Đọc thêm';
-                    articleDiv.appendChild(link);
+    <!-- HTML phần này để hiển thị bài viết mới nhất -->
+    <section id="latest-posts">
+        <h2>Bài Viết Mới Nhất</h2>
+        <ul id="posts-list">
+        <!-- Các bài viết sẽ được thêm vào đây qua JavaScript -->
+        </ul>
+    </section>
 
-                    const description = document.createElement('p');
-                    description.textContent = article.description;
-                    articleDiv.appendChild(description);
-
-                    articlesContainer.appendChild(articleDiv);
-                });
-            })
-            .catch(error => console.error('Error loading JSON:', error));
-    </script>
+    <!-- Footer - Liên hệ -->
+    <footer>
+        <div class="container">
+            <p>Liên hệ: info@cozynest.link</p>
+            <form action="#" method="post">
+                <input type="text" placeholder="Tên của bạn" name="name" required>
+                <input type="email" placeholder="Email của bạn" name="email" required>
+                <textarea placeholder="Yêu cầu của bạn..." name="message" required></textarea>
+                <button type="submit">Gửi yêu cầu</button>
+            </form>
+        </div>
+    </footer>
 </body>
 </html>
