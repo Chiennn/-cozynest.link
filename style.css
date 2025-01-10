@@ -8,7 +8,7 @@ body {
 
 /* Header */
 header {
-    background-color: #e67b7b;
+    background-color: #d5eceeea;
     color: white;
     padding: 20px 0;
 }
@@ -72,7 +72,7 @@ main {
 
 /* Footer */
 footer {
-    background-color: #e67b7b;
+    background-color: #d5eceeea;
     color: white;
     padding: 20px 0;
 }

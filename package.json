@@ -1,0 +1,27 @@
+{
+  "name": "-cozynest.link",
+  "version": "1.0.0",
+  "description": "Nhà đẹp",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chiennn/-cozynest.link.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chiennn/-cozynest.link/issues"
+  },
+  "homepage": "https://github.com/Chiennn/-cozynest.link#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
